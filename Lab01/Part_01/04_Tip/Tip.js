@@ -9,3 +9,7 @@ var tip = (bill) => {
         return bill * 0.20;
     }
 }
+
+var final_bill = (bill) => {
+    return bill + tip(bill);
+}
