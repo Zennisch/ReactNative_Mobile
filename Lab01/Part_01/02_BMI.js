@@ -1,9 +1,9 @@
-var calculateBMI = (person) => {
+const calculateBMI = (person) => {
     return person.mass / person.height ** 2;
 }
 
-var markBMI = 28.3;
-var johnBMI = 23.9;
+const markBMI = 28.3;
+const johnBMI = 23.9;
 
 if (markBMI > johnBMI) {
     console.log(`Mark's BMI ${markBMI} is higher than John's ${johnBMI}.`);

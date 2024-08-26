@@ -1,21 +1,21 @@
-var mark = {
+const mark = {
     mass: 78,
     height: 1.69,
 };
 
-var john = {
+const john = {
     mass: 95,
     height: 1.88,
 };
 
-var calculateBMI = (person) => {
+const calculateBMI = (person) => {
     return person.mass / person.height ** 2;
 }
 
-var markBMI = calculateBMI(mark);
-var johnBMI = calculateBMI(john);
+const markBMI = calculateBMI(mark);
+const johnBMI = calculateBMI(john);
 
-var markHigherBMI = markBMI > johnBMI;
+const markHigherBMI = markBMI > johnBMI;
 
 console.log("Mark's BMI: " + markBMI);
 console.log("John's BMI: " + johnBMI);

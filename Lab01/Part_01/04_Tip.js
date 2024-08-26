@@ -1,8 +1,8 @@
-var bill_value_1 = 275;
-var bill_value_2 = 40;
-var bill_value_3 = 430;
+const bill_value_1 = 275;
+const bill_value_2 = 40;
+const bill_value_3 = 430;
 
-var tip = (bill) => {
+const tip = (bill) => {
     if(bill >= 50 && bill <= 300){
         return bill * 0.15;
     } else {
@@ -10,7 +10,7 @@ var tip = (bill) => {
     }
 }
 
-var final_bill = (bill) => {
+const final_bill = (bill) => {
     return bill + tip(bill);
 }
 
