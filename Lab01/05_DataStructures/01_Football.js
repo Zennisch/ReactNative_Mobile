@@ -60,3 +60,15 @@ const allPlayers = players1.concat(players2);
 // 4. Create final array with all players
 // const players1Final = [...players1, 'Thiago', 'Coutinho', 'Perisic'];
 const players1Final = players1.concat(['Thiago', 'Coutinho', 'Perisic']);
+
+// 5. Create odds object
+// const { team1, x: draw, team2 } = game.odds;
+const team1 = game.odds.team1;
+const draw = game.odds.x;
+const team2 = game.odds.team2;
+
+// 6. Write a function 'printGoals'
+const printGoals = function (...players) {
+    console.log(`${players.length} goals were scored`);
+}
+printGoals('Davies', 'Muller', 'Lewandowski', 'Kimmich');
