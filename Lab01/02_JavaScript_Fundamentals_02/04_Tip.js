@@ -23,3 +23,11 @@ calcTips(bills);
 console.log(`Bills: ${bills.join(', ')}`);
 console.log(`Tips: ${tips.join(', ')}`);
 console.log(`Totals: ${totals.join(', ')}`);
+console.log();
+
+const calcAverage = (arr) => {
+    let totals = arr.reduce((acc, val) => acc + val, 0);
+    return totals / arr.length;
+}
+
+console.log(`Average total: ${calcAverage(totals)}`);
