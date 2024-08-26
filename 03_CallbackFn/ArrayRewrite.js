@@ -26,6 +26,12 @@ const myFilter = (array, callback) => {
     return result;
 }
 
+const myForEach = (array, callback) => {
+    for (let i = 0; i < array.length; i++) {
+        callback(array[i], i, array);
+    }
+}
+
 const myMap = (array, callback) => {
     const result = [];
 
@@ -48,6 +54,10 @@ Array.prototype.filter = function(callback) {
     return myFilter(this, callback);
 }
 
+Array.prototype.forEach = function(callback) {
+    myForEach(this, callback);
+}
+
 Array.prototype.map = function(callback) {
     return myMap(this, callback);
 }
@@ -66,6 +76,12 @@ console.log('\nMy Filter');
 const callback_filter = (number) => number > 20;
 const oddNumbers = numbers.filter(callback_filter);
 console.log(`List of odd numbers: ${oddNumbers.join(', ')}`);
+
+console.log('\nMy ForEach');
+const callback_forEach = (number) => process.stdout.write(`${number} `);
+console.log('List of numbers:');
+numbers.forEach(callback_forEach);
+console.log();
 
 console.log('\nMy Map');
 const callback_map = (number) => number * 2;
