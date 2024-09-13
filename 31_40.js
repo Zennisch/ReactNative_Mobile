@@ -38,7 +38,8 @@ console.log()
 console.log('34)');
 let textArray = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem odio, odio.";
 let wordsArray = (text) => {
-    text = text.replace(/[.,]/g, '');
+    // Replace any characters not word
+    text = text.replace(/[^a-zA-Z ]/g, '');
     return new Set(text.split(' '));
 }
 console.log(wordsArray(textArray));
