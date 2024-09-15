@@ -12,9 +12,11 @@ const styles = StyleSheet.create({
     button: {
         backgroundColor: "#E3C000",
         color: "#fff",
-        paddingHorizontal: 30,
-        paddingVertical: 15,
+        width: 100,
+        height: 40,
         fontSize: 16,
         borderRadius: 5,
+        justifyContent: "center",
+        alignItems: "center",
     },
 });
