@@ -1,6 +1,7 @@
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
-import HomeScreen from "./Home";
+import Login from "./Login";
+import Home from "./Home";
 
 const Stack = createNativeStackNavigator();
 export default function RouteBuilder() {
@@ -9,7 +10,7 @@ export default function RouteBuilder() {
             initialRouteName={"HomeScreen"}
             screenOptions={{ headerShown: false }}
         >
-            <Stack.Screen key={1} name={"HomeScreen"} component={HomeScreen} />
+            <Stack.Screen key={1} name={"HomeScreen"} component={Login} />
         </Stack.Navigator>
     );
 }
