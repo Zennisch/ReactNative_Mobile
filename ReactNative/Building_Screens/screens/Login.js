@@ -21,9 +21,9 @@ export default function Login() {
                 <Text style={styles.buttonText}>Login</Text>
             </TouchableOpacity>
             <View>
-                <Text>When you agree to term and condition</Text>
-                <Text>Forgot your password?</Text>
-                <Text>Or login with</Text>
+                <Text style={styles.more}>When you agree to term and condition</Text>
+                <Text style={styles.more}>Forgot your password?</Text>
+                <Text style={styles.more}>Or login with</Text>
             </View>
 
         </SafeAreaView>
@@ -71,4 +71,7 @@ const styles = StyleSheet.create({
         color: "white",
         fontSize: 20,
     },
+    more: {
+        textAlign: "center"
+    }
 });
