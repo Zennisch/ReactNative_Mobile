@@ -34,6 +34,7 @@ export default function ForgetScreen() {
                                 backgroundColor: "#E3C000",
                                 width: "90%",
                                 paddingVertical: 15,
+                                marginTop: "5%",
                             }}
                             styleText={{
                                 fontSize: 20,
