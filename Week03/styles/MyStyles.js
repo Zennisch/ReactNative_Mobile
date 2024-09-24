@@ -42,6 +42,8 @@ const styles = StyleSheet.create({
     textSize24: {fontSize: 24},
     textSize30: {fontSize: 30},
     textSize36: {fontSize: 36},
+    textSize42: {fontSize: 42},
+    textSize48: {fontSize: 48},
 
     textRed: {color: 'red'},
     textBlue: {color: 'blue'},

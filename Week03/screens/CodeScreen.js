@@ -3,37 +3,43 @@ import {LinearGradient} from "expo-linear-gradient";
 import s from "../styles/MyStyles";
 import Button from "../components/Button";
 
-export default function ForgetScreen() {
+export default function CodeScreen() {
     return (
         <SafeAreaView style={[s.flex]}>
             <LinearGradient colors={["#C7F4F6", "#D1F4F6", "#E5F4F5", "#37D6F8", "#00CCF9"]}
                             locations={[0, 0.3, 0.8, 0.9, 1]}>
                 <View style={[s.h25, s.justifyCenter_alignCenter]}>
-                    <Image source={require("../myassets/Lock.png")}/>
+                    <Text style={[s.textSize48, s.textBold]}>{"CODE"}</Text>
                 </View>
                 <View style={[s.h15, s.justifyCenter_alignCenter]}>
-                    <Text style={[s.textCenter, styles.fontSize_30, styles.fontBold]}>{"FORGET\nPASSWORD"}</Text>
+                    <Text style={[s.textCenter, styles.fontSize_30, styles.fontBold]}>{"VERIFICATION"}</Text>
                 </View>
                 <View style={[s.h15, s.justifyCenter_alignCenter]}>
-                    <Text style={[s.textCenter, styles.fontSize_20, styles.fontBold]}>{"Provide your account's email for which you\n"
-                        + "want to reset your password"}</Text>
+                    <Text style={[s.textCenter, styles.fontSize_20, styles.fontBold]}>
+                        {"Enter ontime password sent on\n"
+                        + "++849092605798"}</Text>
                 </View>
                 <View style={[s.h10, s.justifyCenter_alignCenter, s.flexRow]}>
-                    <View style={[s.h80, styles.input, s.justifyCenter_alignCenter]}>
-                        <Image source={require("../myassets/Mail.png")}
-                               style={[s.h80, s.aspectRatio1, styles.input]}
-                        />
-                    </View>
-                    <TextInput style={[styles.fontSize_20, s.w80, s.h80, styles.pl_10, styles.input]}
-                               placeholder={"Email"}
-                    />
+                    <TextInput style={[styles.borderW1, s.textCenter, s.aspectRatio1, s.h80, s.textSize24]}
+                        maxLength={1} />
+                    <TextInput style={[styles.borderW1, s.textCenter, s.aspectRatio1, s.h80, s.textSize24]}
+                               maxLength={1} />
+                    <TextInput style={[styles.borderW1, s.textCenter, s.aspectRatio1, s.h80, s.textSize24]}
+                               maxLength={1} />
+                    <TextInput style={[styles.borderW1, s.textCenter, s.aspectRatio1, s.h80, s.textSize24]}
+                               maxLength={1} />
+                    <TextInput style={[styles.borderW1, s.textCenter, s.aspectRatio1, s.h80, s.textSize24]}
+                               maxLength={1} />
+                    <TextInput style={[styles.borderW1, s.textCenter, s.aspectRatio1, s.h80, s.textSize24]}
+                               maxLength={1} />
                 </View>
                 <View style={[s.h35, s.alignCenter]}>
-                    <Button title={"NEXT"}
+                    <Button title={"VERIFY CODE"}
                             styleButton={{
                                 backgroundColor: "#E3C000",
                                 width: "90%",
                                 paddingVertical: 15,
+                                marginTop: "10%",
                             }}
                             styleText={{
                                 fontSize: 20,
@@ -59,4 +65,8 @@ const styles = StyleSheet.create({
     justifyAround: {justifyContent: "space-around"},
 
     pl_10: {paddingLeft: 10},
+
+    marginTop10: {marginTop: 10},
+
+    borderW1: {borderWidth: 1},
 })
