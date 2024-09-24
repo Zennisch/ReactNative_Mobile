@@ -8,13 +8,13 @@ export default function ForgetScreen() {
         <SafeAreaView style={[s.flex]}>
             <LinearGradient colors={["#C7F4F6", "#D1F4F6", "#E5F4F5", "#37D6F8", "#00CCF9"]}
                             locations={[0, 0.3, 0.8, 0.9, 1]}>
-                <View style={[s.h30, s.justifyCenter_alignCenter]}>
+                <View style={[s.h25, s.justifyCenter_alignCenter]}>
                     <Image source={require("../myassets/Lock.png")}/>
                 </View>
-                <View style={[s.h20, s.justifyCenter_alignCenter]}>
+                <View style={[s.h15, s.justifyCenter_alignCenter]}>
                     <Text style={[s.textCenter, styles.fontSize_30, styles.fontBold]}>{"FORGET\nPASSWORD"}</Text>
                 </View>
-                <View style={[s.h10, s.justifyCenter_alignCenter]}>
+                <View style={[s.h15, s.justifyCenter_alignCenter]}>
                     <Text style={[s.textCenter, styles.fontSize_20, styles.fontBold]}>{"Provide your account's email for which you\n"
                         + "want to reset your password"}</Text>
                 </View>
@@ -28,7 +28,7 @@ export default function ForgetScreen() {
                                placeholder={"Email"}
                     />
                 </View>
-                <View style={[s.h30, s.alignCenter]}>
+                <View style={[s.h35, s.alignCenter]}>
                     <Button title={"NEXT"}
                             styleButton={{
                                 backgroundColor: "#E3C000",
