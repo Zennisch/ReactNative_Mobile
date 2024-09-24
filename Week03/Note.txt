@@ -1,4 +1,0 @@
-Installed:
-npx create-expo-app@latest ./ --template blank
-npx expo install react-dom react-native-web @react-navigation/native
-npm install react-native-html-parser
