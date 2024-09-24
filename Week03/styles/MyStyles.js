@@ -11,6 +11,8 @@ const styles = StyleSheet.create({
     alignEnd: {alignItems: 'flex-end'},
 
     selfCenter: {alignSelf: 'center'},
+    selfStart: {alignSelf: "flex-start"},
+    selfEnd: {alignSelf: "flex-end"},
 
     justifyCenter: {justifyContent: 'center'},
     justifyStart: {justifyContent: 'flex-start'},
