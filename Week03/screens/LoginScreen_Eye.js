@@ -74,7 +74,6 @@ export default function LoginScreen_Eye() {
                     }}>
                             <Image source={require("../myassets/Facebook.png")}/>
                     </TouchableOpacity>
-
                 </View>
             </View>
         </SafeAreaView>
