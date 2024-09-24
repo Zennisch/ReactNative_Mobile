@@ -1,10 +1,12 @@
-import {Image, ImageBackground, SafeAreaView, StyleSheet, Text, TextInput, TouchableOpacity, View} from "react-native";
+import {Image, KeyboardAvoidingView, Platform, StyleSheet, Text, TextInput, TouchableOpacity, View} from "react-native";
 import s from "../styles/MyStyles";
 import Button from "../components/Button";
 
 export default function LoginScreen_Eye() {
     return(
-        <SafeAreaView style={[s.flex, s.p12]}>
+        <KeyboardAvoidingView style={[s.flex, s.p12]}
+                              behavior={Platform.OS === "ios" ? "padding" : "height"}
+        >
             <View style={[s.h25, s.justifyCenter_alignCenter]}>
                 <Image source={require("../myassets/Eyeball.png")}/>
             </View>
@@ -45,11 +47,11 @@ export default function LoginScreen_Eye() {
                 <View style={[s.flexRow, s.justifyAround, s.alignCenter, s.w90]}>
                     <Button title={"Register"}
                             styleButton={[s.w50, styles.selfStart]}
-                            styleText={[s.textBlack, s.textSize24]}
+                            styleText={[s.textBlack, s.textSize18]}
                     />
                     <Button title={"Forgot Password"}
-                            styleButton={[s.w50, styles.selfEnd]}
-                            styleText={[s.textBlack, s.textSize24]}
+                            styleButton={[s.w50, s.selfEnd]}
+                            styleText={[s.textBlack, s.textSize18]}
                     />
                 </View>
             </View>
@@ -76,7 +78,7 @@ export default function LoginScreen_Eye() {
                     </TouchableOpacity>
                 </View>
             </View>
-        </SafeAreaView>
+        </KeyboardAvoidingView>
     )
 }
 
