@@ -1,4 +1,4 @@
-import {Image, SafeAreaView, StyleSheet, Text, TextInput, View} from "react-native";
+import {Image, SafeAreaView, StyleSheet, Text, TextInput, TouchableOpacity, View} from "react-native";
 import s from "../styles/MyStyles";
 import Button from "../components/Button";
 
@@ -23,10 +23,12 @@ export default function RegisterScreen() {
                                placeholder={"Password"}>
                     </TextInput>
                     <View style={[s.h100, s.w20, s.justifyCenter_alignCenter, styles.input]}>
-                        <Image source={require("../myassets/Eye.png")}
-                               style={[s.h60, s.w100, s.selfCenter, styles.input]}
-                               resizeMode={"contain"}
-                        />
+                        <TouchableOpacity style={[s.wh100, s.justifyCenter_alignCenter]}>
+                            <Image source={require("../myassets/Eye.png")}
+                                   style={[s.h60, s.w100, s.selfCenter, styles.input]}
+                                   resizeMode={"contain"}
+                            />
+                        </TouchableOpacity>
                     </View>
                 </View>
                 <TextInput style={[styles.input, s.h15, s.p18, s.textSize18]}
