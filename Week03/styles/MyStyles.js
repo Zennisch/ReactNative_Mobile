@@ -10,9 +10,14 @@ const styles = StyleSheet.create({
     alignStart: {alignItems: 'flex-start'},
     alignEnd: {alignItems: 'flex-end'},
 
+    selfCenter: {alignSelf: 'center'},
+
     justifyCenter: {justifyContent: 'center'},
     justifyStart: {justifyContent: 'flex-start'},
     justifyEnd: {justifyContent: 'flex-end'},
+    justifyBetween: {justifyContent: 'space-between'},
+    justifyAround: {justifyContent: 'space-around'},
+    justifyEvenly: {justifyContent: 'space-evenly'},
 
     justifyCenter_alignCenter: {justifyContent: 'center', alignItems: 'center'},
     justifyCenter_alignStart: {justifyContent: 'center', alignItems: 'flex-start'},
