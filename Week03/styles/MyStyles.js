@@ -88,6 +88,10 @@ const styles = StyleSheet.create({
     bgGreen: {backgroundColor: 'green'},
     bgWhite: {backgroundColor: 'white'},
     bgBlack: {backgroundColor: 'black'},
+    bgGray: {backgroundColor: 'gray'},
+    bgLightGray: {backgroundColor: 'lightgray'},
+
+    aspectRatio_1: {aspectRatio: 1},
 });
 
 export default styles;
