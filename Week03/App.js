@@ -6,6 +6,7 @@ import ForgetScreen from "./screens/ForgetScreen";
 import CodeScreen from "./screens/CodeScreen";
 import HomeScreen_D from "./screens/HomeScreen_D";
 import RegisterScreen from "./screens/RegisterScreen";
+import LoginScreen from "./screens/LoginScreen";
 import {StyleSheet} from "react-native";
 
 const Stack = createNativeStackNavigator();
@@ -18,7 +19,8 @@ export default function App() {
                 {/*<Stack.Screen name={"ForgetScreen"} component={ForgetScreen}/>*/}
                 {/*<Stack.Screen name={"CodeScreen"} component={CodeScreen}/>*/}
                 {/*<Stack.Screen name={"HomeScreen_D"} component={HomeScreen_D}/>*/}
-                <Stack.Screen name={"RegisterScreen"} component={RegisterScreen}/>
+                {/*<Stack.Screen name={"RegisterScreen"} component={RegisterScreen}/>*/}
+                <Stack.Screen name={"LoginScreen"} component={LoginScreen}/>
             </Stack.Navigator>
         </NavigationContainer>
     );
