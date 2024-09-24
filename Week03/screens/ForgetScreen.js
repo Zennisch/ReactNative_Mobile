@@ -21,7 +21,7 @@ export default function ForgetScreen() {
                 <View style={[s.h10, s.justifyCenter_alignCenter, s.flexRow]}>
                     <View style={[s.h80, styles.input, s.justifyCenter_alignCenter]}>
                         <Image source={require("../myassets/Mail.png")}
-                               style={[s.h80, s.aspectRatio_1, styles.input]}
+                               style={[s.h80, s.aspectRatio1, styles.input]}
                         />
                     </View>
                     <TextInput style={[styles.fontSize_20, s.w80, s.h80, styles.pl_10, styles.input]}
