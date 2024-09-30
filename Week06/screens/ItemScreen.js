@@ -3,7 +3,7 @@ import {FlatList, Image, Text, TouchableOpacity, View} from "react-native";
 import s from "../styles/MyStyles";
 import Button from "../components/Button";
 
-export default function ItemScreen({route}) {
+export default function ItemScreen({}) {
     const items = [
         {
             "id": "1",
@@ -15,7 +15,6 @@ export default function ItemScreen({route}) {
             "id": "2",
             "name": "1KG KHÔ GÀ BƠ TỎI",
             "distributor": "LTD Food",
-            // "image": "../myassets/ga_bo_toi.png",
             "image": require("../myassets/ga_bo_toi.png"),
         },
         {
