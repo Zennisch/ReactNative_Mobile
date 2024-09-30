@@ -50,11 +50,23 @@ export default function ItemScreen({route}) {
         }];
 
     return (
-        <FlatList
-            data={items}
-            renderItem={({item}) => (Item({item}))}
-            keyExtractor={item => item.id.toString()}
-        />
+        <View style={[s.flex]}>
+            <View style={[{height: 50, backgroundColor: "#1BA9FF"}, s.flexRow, s.alignCenter]}>
+                <Button title={"←"}
+                        styleText={[s.textWhite, s.textSize48, s.lineHeight48, s.w20]}/>
+                <Text style={[s.textWhite, s.textSize24, s.lineHeight24, s.w60]}>Items</Text>
+                <Button title={"🛒"}
+                        styleText={[s.textWhite, s.textSize48, s.lineHeight48, s.w20]}/>
+            </View>
+            <FlatList
+                data={items}
+                renderItem={({item}) => (Item({item}))}
+                keyExtractor={item => item.id.toString()}
+            />
+            <View style={[{height: 50, backgroundColor: "#1BA9FF"}]}>
+
+            </View>
+        </View>
     )
 }
 
@@ -62,7 +74,7 @@ function Item({item}) {
     return (
         <View style={[s.flex, s.flexRow, s.alignCenter, s.justifyStart, s.bgWhite, {height: 100, marginBottom: 5}]}>
             <View style={[s.w20, s.h100, s.justifyStart_alignCenter]}>
-                <Image source={item.image} style={[s.w90, s.h90]} />
+                <Image source={item.image} style={[s.w90, s.h90]}/>
             </View>
             <View style={[s.w60, s.h100]}>
                 <Text>{item.name}</Text>
@@ -70,7 +82,7 @@ function Item({item}) {
             </View>
             <View style={[s.w20, s.h100, s.justifyCenter_alignCenter]}>
                 <Button title={"Chat"}
-                        styleButton={[s.bgRed, s.w90, s.h50, s.justifyCenter_alignCenter]}
+                        styleButton={[s.bgRed, s.w90, s.h40, s.justifyCenter_alignCenter]}
                         styleText={[s.textWhite]}
                 />
             </View>

@@ -52,6 +52,14 @@ const styles = StyleSheet.create({
     textSize42: {fontSize: 42},
     textSize48: {fontSize: 48},
 
+    lineHeight12: {lineHeight: 12},
+    lineHeight18: {lineHeight: 18},
+    lineHeight24: {lineHeight: 24},
+    lineHeight30: {lineHeight: 30},
+    lineHeight36: {lineHeight: 36},
+    lineHeight42: {lineHeight: 42},
+    lineHeight48: {lineHeight: 48},
+
     textRed: {color: 'red'},
     textBlue: {color: 'blue'},
     textGreen: {color: 'green'},
