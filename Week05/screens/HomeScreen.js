@@ -20,7 +20,7 @@ export default function HomeScreen({navigation}) {
                 style={{
                     height: '7%',
                     justifyContent: 'center',
-                    alignItems: 'start',
+                    alignItems: 'flex-start',
                 }}>
                 <Text style={{
                     fontSize: 20,
@@ -34,7 +34,7 @@ export default function HomeScreen({navigation}) {
                     width: '100%',
                     flexDirection: 'row',
                     alignItems: 'center',
-                    justifyContent: 'start',
+                    justifyContent: 'flex-start',
                 }}>
                 <View
                     style={{
@@ -42,7 +42,7 @@ export default function HomeScreen({navigation}) {
                         width: '50%',
                         flexDirection: 'row',
                         alignItems: 'center',
-                        justifyContent: 'start',
+                        justifyContent: 'flex-start',
                         gap: 15,
                     }}>
                     <Image
@@ -74,7 +74,7 @@ export default function HomeScreen({navigation}) {
                 <View style={{
                     width: '50%',
                     justifyContent: 'center',
-                    alignItems: 'start',
+                    alignItems: 'flex-start',
                 }}>
                     <Text>(Xem 828 đánh giá)</Text>
                 </View>
@@ -119,7 +119,7 @@ export default function HomeScreen({navigation}) {
                         justifyContent: 'center',
                         alignItems: 'center',
                     }}
-                >
+                    onPress={() => navigation.navigate("SelectScreen")}>
                     <Text>4 MÀU - CHỌN MÀU</Text>
                 </TouchableOpacity>
                 <TouchableOpacity
