@@ -60,7 +60,7 @@ export default function ItemScreen({route}) {
 
 function Item({item}) {
     return (
-        <View style={[s.flex, s.flexRow, s.alignCenter, s.justifyStart, {height: 100}]}>
+        <View style={[s.flex, s.flexRow, s.alignCenter, s.justifyStart, s.bgWhite, {height: 100, marginBottom: 5}]}>
             <View style={[s.w20, s.h100, s.justifyStart_alignCenter]}>
                 <Image source={item.image} style={[s.w90, s.h90]} />
             </View>
