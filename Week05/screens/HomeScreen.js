@@ -21,7 +21,7 @@ export default function HomeScreen({route, navigation}) {
         <SafeAreaView style={{flex: 1, padding: 20, backgroundColor: '#EEEEEE'}}>
             <View style={{height: '50%', width: '100%'}}>
                 <Image
-                    source={colorOfImage[selectedColor] || require('../myassets/vs_blue.png')}
+                    source={colorOfImage[selectedColor]}
                     style={{height: '100%', width: '100%'}}
                     resizeMode="contain"
                 />
