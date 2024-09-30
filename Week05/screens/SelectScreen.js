@@ -8,16 +8,16 @@ import {
 
 export default function App({navigation}) {
     return (
-        <SafeAreaView style={{ flex: 1, padding: 10, backgroundColor: '#EEEEEE' }}>
+        <SafeAreaView style={{flex: 1, padding: 10, backgroundColor: '#EEEEEE'}}>
             <View
-                style={{ height: '20%', flexDirection: 'row' }}>
-                <View style={{ width: '30%' }}>
+                style={{height: '20%', flexDirection: 'row'}}>
+                <View style={{width: '30%'}}>
                     <Image source={require('../myassets/vs_blue.png')}
                            style={{width: '100%', height: '100%'}}
-                           resizeMode= 'contain'
+                           resizeMode='contain'
                     />
                 </View>
-                <View style={{ width: '70%' }}>
+                <View style={{width: '70%'}}>
                     <Text>Điện thoại Vsmart Joy 3</Text>
                     <Text>Hàng chính hãng</Text>
                 </View>
@@ -62,7 +62,16 @@ export default function App({navigation}) {
                             backgroundColor: '#eeeeee',
                         }}></TouchableOpacity>
                 </View>
-                <TouchableOpacity style={{justifyContent: 'center', alignItems: 'center', backgroundColor: '#4444FF', height: '10%', borderRadius: 10}}>
+                <TouchableOpacity
+                    style={{
+                        justifyContent: 'center',
+                        alignItems: 'center',
+                        backgroundColor: '#4444FF',
+                        height: '10%',
+                        borderRadius: 10
+                    }}
+                    onPress={() => navigation.navigate('HomeScreen')}
+                >
                     <Text style={{color: 'white'}}>XONG</Text>
                 </TouchableOpacity>
             </View>
