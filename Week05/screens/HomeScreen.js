@@ -8,7 +8,7 @@ import {
 
 export default function HomeScreen() {
     return (
-        <SafeAreaView style={{ flex: 1, padding: 10, backgroundColor: '#EEEEEE' }}>
+        <SafeAreaView style={{ flex: 1, padding: 20, backgroundColor: '#EEEEEE' }}>
             <View style={{ height: '50%', width: '100%' }}>
                 <Image
                     source={require('../myassets/vs_blue.png')}
@@ -20,7 +20,7 @@ export default function HomeScreen() {
                 style={{
                     height: '7%',
                     justifyContent: 'center',
-                    alignItems: 'center',
+                    alignItems: 'start',
                 }}>
                 <Text style={{
                     fontSize: 20,
@@ -69,12 +69,23 @@ export default function HomeScreen() {
                         resizeMode="contain"
                     />
                 </View>
-                <View style={{ width: '50%' }}><Text>(Xem 828 đánh giá)</Text></View>
+                <View style={{
+                    width: '50%',
+                    justifyContent: 'center',
+                    alignItems: 'start',
+                }}>
+                    <Text>(Xem 828 đánh giá)</Text>
+                </View>
             </View>
             <View
                 style={{ height: '7%', flexDirection: 'row', alignItems: 'center' }}>
                 <View style={{ width: '30%' }}>
-                    <Text style={{ fontWeight: 'bold' }}>1.790.000 đ</Text>
+                    <Text style={{
+                        fontWeight: 'bold',
+                        fontSize: 20,
+                    }}>
+                        1.790.000 đ
+                    </Text>
                 </View>
                 <View
                     style={{
@@ -98,8 +109,8 @@ export default function HomeScreen() {
                 }}>
                 <TouchableOpacity
                     style={{
-                        height: '75%',
-                        width: '95%',
+                        height: '90%',
+                        width: '100%',
                         textAlign: 'center',
                         borderWidth: 1,
                         borderRadius: 25,
@@ -119,7 +130,7 @@ export default function HomeScreen() {
                 <TouchableOpacity
                     style={{
                         height: '90%',
-                        width: '95%',
+                        width: '100%',
                         textAlign: 'center',
                         backgroundColor: 'red',
                         borderRadius: 25,
