@@ -59,7 +59,7 @@ export default function BookScreen({navigation, route}) {
                     </View>
                     <View style={[s.h35, s.flexRow, s.alignCenter, s.justifyAround]}>
                         <TouchableOpacity
-                            style={[s.w50, s.h50, s.justifyCenter_alignCenter, s.flexRow, styles.gap10, styles.bW1]}>
+                            style={[s.w50, s.h50, s.justifyCenter_alignCenter, s.flexRow, styles.gap18, styles.bW1]}>
                             <View style={[styles.bgYellow, s.h50, s.w20]}></View>
                             <Text style={[s.textBold, s.textSize18]}>Mã Giảm Giá</Text>
                         </TouchableOpacity>
