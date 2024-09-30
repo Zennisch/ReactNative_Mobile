@@ -103,13 +103,13 @@ export default function HomeScreen() {
             </View>
             <View
                 style={{
-                    height: '7%',
-                    justifyContent: 'center',
+                    height: '21%',
+                    justifyContent: 'space-evenly',
                     alignItems: 'center',
                 }}>
                 <TouchableOpacity
                     style={{
-                        height: '90%',
+                        height: '35%',
                         width: '100%',
                         textAlign: 'center',
                         borderWidth: 1,
@@ -119,17 +119,9 @@ export default function HomeScreen() {
                     }}>
                     <Text>4 MÀU - CHỌN MÀU</Text>
                 </TouchableOpacity>
-            </View>
-            <View style={{ height: '7%' }}></View>
-            <View
-                style={{
-                    height: '7%',
-                    justifyContent: 'center',
-                    alignItems: 'center',
-                }}>
                 <TouchableOpacity
                     style={{
-                        height: '90%',
+                        height: '35%',
                         width: '100%',
                         textAlign: 'center',
                         backgroundColor: 'red',
@@ -140,6 +132,7 @@ export default function HomeScreen() {
                     <Text style={{ color: 'white' }}>CHỌN MUA</Text>
                 </TouchableOpacity>
             </View>
+
         </SafeAreaView>
     );
 }
