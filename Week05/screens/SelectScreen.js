@@ -18,19 +18,29 @@ export default function App({navigation}) {
         '#EEEEEE': require('../myassets/vs_silver.png'),
     }
 
+    const colorOfName = {
+        '#AAAAFF': "Xanh",
+        '#FF0000': "Đỏ",
+        '#000000': "Đen",
+        '#EEEEEE': "Bạc",
+    }
+
     return (
-        <SafeAreaView style={{flex: 1, padding: 10, backgroundColor: '#EEEEEE'}}>
+        <SafeAreaView style={{flex: 1, padding: 20, backgroundColor: '#EEEEEE'}}>
             <View
-                style={{height: '20%', flexDirection: 'row'}}>
+                style={{height: '20%', flexDirection: 'row', padding: 10}}>
                 <View style={{width: '30%'}}>
                     <Image source={colorOfImage[selectedColor]}
                            style={{width: '100%', height: '100%'}}
                            resizeMode='contain'
                     />
                 </View>
-                <View style={{width: '70%'}}>
+                <View style={{width: '70%', justifyContent: "space-evenly"}}>
                     <Text>Điện thoại Vsmart Joy 3</Text>
                     <Text>Hàng chính hãng</Text>
+                    <Text>Màu: <Text style={{fontWeight: "bold"}}>{colorOfName[selectedColor]}</Text></Text>
+                    <Text>Cung cấp bởi Tiki Trading</Text>
+                    <Text style={{fontSize: 20, fontWeight: "bold"}}>1.790.000 đ</Text>
                 </View>
             </View>
             <View
@@ -38,7 +48,7 @@ export default function App({navigation}) {
                     height: '80%',
                     padding: 10,
                     gap: 10,
-                    backgroundColor: 'lightgray',
+                    backgroundColor: '#C4C4C4',
                 }}>
                 <Text>Chọn một màu bên dưới</Text>
                 <View
