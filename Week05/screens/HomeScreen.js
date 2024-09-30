@@ -130,7 +130,11 @@ export default function HomeScreen({route, navigation}) {
                         alignItems: 'center',
                     }}
                     onPress={() => navigation.navigate("SelectScreen")}>
-                    <Text style={{textAlign: 'center'}}>4 MÀU - CHỌN MÀU</Text>
+                    <View style={{justifyContent: "space-between", alignItems: "center", flexDirection: "row"}}>
+                        <Text style={{fontSize: 20, width: "10%"}}></Text>
+                        <Text style={{textAlign: 'center', width: "80%"}}>4 MÀU - CHỌN MÀU</Text>
+                        <Text style={{fontSize: 25, width: "10%"}}>{">"}</Text>
+                    </View>
                 </TouchableOpacity>
                 <TouchableOpacity
                     style={{
