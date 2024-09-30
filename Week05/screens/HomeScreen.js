@@ -6,12 +6,22 @@ import {
     TouchableOpacity,
 } from 'react-native';
 
-export default function HomeScreen({navigation}) {
+export default function HomeScreen({route, navigation}) {
+
+    const {selectedColor} = route.params || {selectedColor: '#AAAAFF'};
+
+    const colorOfImage = {
+        '#AAAAFF': require('../myassets/vs_blue.png'),
+        '#FF0000': require('../myassets/vs_red.png'),
+        '#000000': require('../myassets/vs_black.png'),
+        '#EEEEEE': require('../myassets/vs_silver.png'),
+    }
+
     return (
         <SafeAreaView style={{flex: 1, padding: 20, backgroundColor: '#EEEEEE'}}>
             <View style={{height: '50%', width: '100%'}}>
                 <Image
-                    source={require('../myassets/vs_blue.png')}
+                    source={colorOfImage[selectedColor] || require('../myassets/vs_blue.png')}
                     style={{height: '100%', width: '100%'}}
                     resizeMode="contain"
                 />
