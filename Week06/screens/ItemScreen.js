@@ -1,4 +1,4 @@
-import {FlatList, Image, Text, View} from "react-native";
+import {FlatList, Image, Text, TouchableOpacity, View} from "react-native";
 // import Item from "../components/Item";
 import s from "../styles/MyStyles";
 import Button from "../components/Button";
@@ -51,20 +51,35 @@ export default function ItemScreen({route}) {
 
     return (
         <View style={[s.flex]}>
-            <View style={[{height: 50, backgroundColor: "#1BA9FF"}, s.flexRow, s.alignCenter]}>
-                <Button title={"←"}
-                        styleText={[s.textWhite, s.textSize48, s.lineHeight48, s.w20]}/>
-                <Text style={[s.textWhite, s.textSize24, s.lineHeight24, s.w60]}>Items</Text>
-                <Button title={"🛒"}
-                        styleText={[s.textWhite, s.textSize48, s.lineHeight48, s.w20]}/>
+            <View style={[{height: 50, backgroundColor: "#1BA9FF"}, s.flexRow]}>
+                <TouchableOpacity style={[s.w10, s.justifyCenter_alignCenter]}>
+                    <Image source={require("../myassets/ant-design_arrow-left-outlined.png")} style={[s.w50, s.h50]}/>
+                </TouchableOpacity>
+                <View style={[s.justifyCenter_alignCenter, s.w80]}>
+                    <Text style={[s.textWhite, s.textSize24]}>Chat</Text>
+                </View>
+                <TouchableOpacity style={[s.w10, s.justifyCenter_alignCenter]}>
+                    <Image source={require("../myassets/bi_cart-check.png")} style={[s.w50, s.h50]}/>
+                </TouchableOpacity>
             </View>
             <FlatList
                 data={items}
                 renderItem={({item}) => (Item({item}))}
                 keyExtractor={item => item.id.toString()}
             />
-            <View style={[{height: 50, backgroundColor: "#1BA9FF"}]}>
-
+            <View style={[{height: 50, backgroundColor: "#1BA9FF"}, s.flexRow]}>
+                <TouchableOpacity style={[s.w10, s.justifyCenter_alignCenter]}>
+                    <Image source={require("../myassets/vector_list.png")} style={[s.w50, s.h50]}/>
+                </TouchableOpacity>
+                <TouchableOpacity style={[s.w80, s.justifyCenter_alignCenter]}>
+                    <Image source={require("../myassets/vector_home.png")}
+                           style={[s.h50]}
+                           resizeMode={"contain"}
+                    />
+                </TouchableOpacity>
+                <TouchableOpacity style={[s.w10, s.justifyCenter_alignCenter]}>
+                    <Image source={require("../myassets/vector_back.png")} style={[s.w50, s.h50]}/>
+                </TouchableOpacity>
             </View>
         </View>
     )
