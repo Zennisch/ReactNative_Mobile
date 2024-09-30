@@ -18,7 +18,7 @@ export default function HomeScreen({route, navigation}) {
     }
 
     return (
-        <SafeAreaView style={{flex: 1, padding: 20, backgroundColor: '#EEEEEE'}}>
+        <SafeAreaView style={{flex: 1, padding: 35, backgroundColor: '#EEEEEE'}}>
             <View style={{height: '50%', width: '100%'}}>
                 <Image
                     source={colorOfImage[selectedColor]}
