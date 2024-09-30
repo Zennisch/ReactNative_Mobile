@@ -117,12 +117,12 @@ export default function HomeScreen({route, navigation}) {
             <View
                 style={{
                     height: '21%',
-                    justifyContent: 'space-evenly',
+                    justifyContent: 'space-between',
                     alignItems: 'center',
                 }}>
                 <TouchableOpacity
                     style={{
-                        height: '35%',
+                        height: '25%',
                         width: '100%',
                         borderWidth: 1,
                         borderRadius: 25,
