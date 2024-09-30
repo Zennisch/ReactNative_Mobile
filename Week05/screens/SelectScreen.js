@@ -50,13 +50,19 @@ export default function App({navigation}) {
                     gap: 10,
                     backgroundColor: '#C4C4C4',
                 }}>
-                <Text>Chọn một màu bên dưới</Text>
+                <View style={{
+                    height: "5%",
+                    justifyContent: 'center',
+                }}>
+                    <Text>Chọn một màu bên dưới</Text>
+                </View>
                 <View
                     style={{
                         width: '100%',
                         height: '80%',
                         gap: 10,
                         alignItems: 'center',
+                        justifyContent: 'space-evenly'
                     }}>
                     <TouchableOpacity
                         style={{
@@ -91,18 +97,22 @@ export default function App({navigation}) {
                         onPress={() => setSelectedColor('#EEEEEE')}
                     ></TouchableOpacity>
                 </View>
-                <TouchableOpacity
-                    style={{
-                        justifyContent: 'center',
-                        alignItems: 'center',
-                        backgroundColor: '#4444FF',
-                        height: '10%',
-                        borderRadius: 10
-                    }}
-                    onPress={() => navigation.navigate('HomeScreen', { selectedColor })}
-                >
-                    <Text style={{color: 'white'}}>XONG</Text>
-                </TouchableOpacity>
+                <View style={{
+                    height: "10%"
+                }}>
+                    <TouchableOpacity
+                        style={{
+                            justifyContent: 'center',
+                            alignItems: 'center',
+                            backgroundColor: '#4444FF',
+                            height: '100%',
+                            borderRadius: 10
+                        }}
+                        onPress={() => navigation.navigate('HomeScreen', { selectedColor })}
+                    >
+                        <Text style={{color: 'white'}}>XONG</Text>
+                    </TouchableOpacity>
+                </View>
             </View>
         </SafeAreaView>
     );
