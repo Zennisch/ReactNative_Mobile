@@ -20,8 +20,11 @@ export default function HomeScreen() {
                 style={{
                     height: '7%',
                     justifyContent: 'center',
+                    alignItems: 'center',
                 }}>
-                <Text>Điện Thoại Vsmart Joy 3 - Hàng chính hãng</Text>
+                <Text style={{
+                    fontSize: 20,
+                }}>Điện Thoại Vsmart Joy 3 - Hàng chính hãng</Text>
             </View>
             <View
                 style={{
@@ -38,30 +41,31 @@ export default function HomeScreen() {
                         flexDirection: 'row',
                         alignItems: 'center',
                         justifyContent: 'start',
+                        gap: 15,
                     }}>
                     <Image
                         source={require('../myassets/star.png')}
-                        style={{ height: '50%', marginLeft: -10 }}
+                        style={{ height: '50%'}}
                         resizeMode="contain"
                     />
                     <Image
                         source={require('../myassets/star.png')}
-                        style={{ height: '50%', marginLeft: -20 }}
+                        style={{ height: '50%'}}
                         resizeMode="contain"
                     />
                     <Image
                         source={require('../myassets/star.png')}
-                        style={{ height: '50%', marginLeft: -20 }}
+                        style={{ height: '50%'}}
                         resizeMode="contain"
                     />
                     <Image
                         source={require('../myassets/star.png')}
-                        style={{ height: '50%', marginLeft: -20 }}
+                        style={{ height: '50%'}}
                         resizeMode="contain"
                     />
                     <Image
                         source={require('../myassets/star.png')}
-                        style={{ height: '50%', marginLeft: -20 }}
+                        style={{ height: '50%'}}
                         resizeMode="contain"
                     />
                 </View>
@@ -95,7 +99,7 @@ export default function HomeScreen() {
                 <TouchableOpacity
                     style={{
                         height: '75%',
-                        width: '75%',
+                        width: '95%',
                         textAlign: 'center',
                         borderWidth: 1,
                         borderRadius: 25,
