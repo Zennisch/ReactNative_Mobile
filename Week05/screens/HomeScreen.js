@@ -91,11 +91,12 @@ export default function HomeScreen({navigation}) {
                 </View>
                 <View
                     style={{
-                        width: '70%',
-                        fontSize: 12,
-                        textDecorationLine: 'line-through',
+                        width: '70%'
                     }}>
-                    <Text>1.790.000 đ</Text>
+                    <Text style={{
+                        fontSize: 12,
+                        textDecorationLine: 'line-through'
+                    }}>1.790.000 đ</Text>
                 </View>
             </View>
             <View style={{height: '7%', justifyContent: 'center'}}>
@@ -113,27 +114,28 @@ export default function HomeScreen({navigation}) {
                     style={{
                         height: '35%',
                         width: '100%',
-                        textAlign: 'center',
                         borderWidth: 1,
                         borderRadius: 25,
                         justifyContent: 'center',
                         alignItems: 'center',
                     }}
                     onPress={() => navigation.navigate("SelectScreen")}>
-                    <Text>4 MÀU - CHỌN MÀU</Text>
+                    <Text style={{textAlign: 'center'}}>4 MÀU - CHỌN MÀU</Text>
                 </TouchableOpacity>
                 <TouchableOpacity
                     style={{
                         height: '35%',
                         width: '100%',
-                        textAlign: 'center',
                         backgroundColor: 'red',
                         borderRadius: 25,
                         justifyContent: 'center',
                         alignItems: 'center',
                     }}
                 >
-                    <Text style={{color: 'white'}}>CHỌN MUA</Text>
+                    <Text style={{
+                        color: 'white',
+                        textAlign: 'center'
+                    }}>CHỌN MUA</Text>
                 </TouchableOpacity>
             </View>
         </SafeAreaView>

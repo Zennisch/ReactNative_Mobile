@@ -6,7 +6,7 @@ import {
     TouchableOpacity,
 } from 'react-native';
 
-export default function App() {
+export default function App({navigation}) {
     return (
         <SafeAreaView style={{ flex: 1, padding: 10, backgroundColor: '#EEEEEE' }}>
             <View
@@ -37,30 +37,30 @@ export default function App() {
                         gap: 10,
                         alignItems: 'center',
                     }}>
-                    <View
+                    <TouchableOpacity
                         style={{
                             aspectRatio: 1,
                             height: '20%',
                             backgroundColor: '#aaaaff',
-                        }}></View>
-                    <View
+                        }}></TouchableOpacity>
+                    <TouchableOpacity
                         style={{
                             aspectRatio: 1,
                             height: '20%',
                             backgroundColor: 'red',
-                        }}></View>
-                    <View
+                        }}></TouchableOpacity>
+                    <TouchableOpacity
                         style={{
                             aspectRatio: 1,
                             height: '20%',
                             backgroundColor: 'black',
-                        }}></View>
-                    <View
+                        }}></TouchableOpacity>
+                    <TouchableOpacity
                         style={{
                             aspectRatio: 1,
                             height: '20%',
-                            backgroundColor: '#4444FF',
-                        }}></View>
+                            backgroundColor: '#eeeeee',
+                        }}></TouchableOpacity>
                 </View>
                 <TouchableOpacity style={{justifyContent: 'center', alignItems: 'center', backgroundColor: '#4444FF', height: '10%', borderRadius: 10}}>
                     <Text style={{color: 'white'}}>XONG</Text>
