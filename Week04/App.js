@@ -8,7 +8,7 @@ export default function App() {
     return (
         <NavigationContainer>
             <Stack.Navigator>
-                {/*<Stack.Screen name={"BookScreen"} component={BookScreen} />*/}
+                <Stack.Screen name={"BookScreen"} component={BookScreen} />
                 <Stack.Screen name={"PasswordScreen"} component={PasswordScreen} />
             </Stack.Navigator>
         </NavigationContainer>
