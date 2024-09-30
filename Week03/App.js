@@ -7,7 +7,6 @@ import CodeScreen from "./screens/CodeScreen";
 import HomeScreen_D from "./screens/HomeScreen_D";
 import RegisterScreen from "./screens/RegisterScreen";
 import LoginScreen from "./screens/LoginScreen";
-import {StyleSheet} from "react-native";
 import LoginScreen_Eye from "./screens/LoginScreen_Eye";
 
 const Stack = createNativeStackNavigator();
