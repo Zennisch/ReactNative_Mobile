@@ -26,7 +26,7 @@ export default function App({navigation}) {
     }
 
     return (
-        <SafeAreaView style={{flex: 1, backgroundColor: '#EEEEEE'}}>
+        <SafeAreaView style={{flex: 1, backgroundColor: '#FFFFFF'}}>
             <View
                 style={{height: '20%', flexDirection: 'row', padding: 10}}>
                 <View style={{width: '30%'}}>
