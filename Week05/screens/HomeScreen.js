@@ -6,13 +6,13 @@ import {
     TouchableOpacity,
 } from 'react-native';
 
-export default function HomeScreen() {
+export default function HomeScreen({navigation}) {
     return (
-        <SafeAreaView style={{ flex: 1, padding: 20, backgroundColor: '#EEEEEE' }}>
-            <View style={{ height: '50%', width: '100%' }}>
+        <SafeAreaView style={{flex: 1, padding: 20, backgroundColor: '#EEEEEE'}}>
+            <View style={{height: '50%', width: '100%'}}>
                 <Image
                     source={require('../myassets/vs_blue.png')}
-                    style={{ height: '100%', width: '100%' }}
+                    style={{height: '100%', width: '100%'}}
                     resizeMode="contain"
                 />
             </View>
@@ -24,7 +24,9 @@ export default function HomeScreen() {
                 }}>
                 <Text style={{
                     fontSize: 20,
-                }}>Điện Thoại Vsmart Joy 3 - Hàng chính hãng</Text>
+                }}>
+                    Điện Thoại Vsmart Joy 3 - Hàng chính hãng
+                </Text>
             </View>
             <View
                 style={{
@@ -45,27 +47,27 @@ export default function HomeScreen() {
                     }}>
                     <Image
                         source={require('../myassets/star.png')}
-                        style={{ height: '50%'}}
+                        style={{height: '50%'}}
                         resizeMode="contain"
                     />
                     <Image
                         source={require('../myassets/star.png')}
-                        style={{ height: '50%'}}
+                        style={{height: '50%'}}
                         resizeMode="contain"
                     />
                     <Image
                         source={require('../myassets/star.png')}
-                        style={{ height: '50%'}}
+                        style={{height: '50%'}}
                         resizeMode="contain"
                     />
                     <Image
                         source={require('../myassets/star.png')}
-                        style={{ height: '50%'}}
+                        style={{height: '50%'}}
                         resizeMode="contain"
                     />
                     <Image
                         source={require('../myassets/star.png')}
-                        style={{ height: '50%'}}
+                        style={{height: '50%'}}
                         resizeMode="contain"
                     />
                 </View>
@@ -78,8 +80,8 @@ export default function HomeScreen() {
                 </View>
             </View>
             <View
-                style={{ height: '7%', flexDirection: 'row', alignItems: 'center' }}>
-                <View style={{ width: '30%' }}>
+                style={{height: '7%', flexDirection: 'row', alignItems: 'center'}}>
+                <View style={{width: '30%'}}>
                     <Text style={{
                         fontWeight: 'bold',
                         fontSize: 20,
@@ -96,8 +98,8 @@ export default function HomeScreen() {
                     <Text>1.790.000 đ</Text>
                 </View>
             </View>
-            <View style={{ height: '7%', justifyContent: 'center' }}>
-                <Text style={{ color: 'red', fontWeight: 'bold' }}>
+            <View style={{height: '7%', justifyContent: 'center'}}>
+                <Text style={{color: 'red', fontWeight: 'bold'}}>
                     Ở đâu rẻ hơn hoàn tiền
                 </Text>
             </View>
@@ -116,7 +118,8 @@ export default function HomeScreen() {
                         borderRadius: 25,
                         justifyContent: 'center',
                         alignItems: 'center',
-                    }}>
+                    }}
+                >
                     <Text>4 MÀU - CHỌN MÀU</Text>
                 </TouchableOpacity>
                 <TouchableOpacity
@@ -128,11 +131,11 @@ export default function HomeScreen() {
                         borderRadius: 25,
                         justifyContent: 'center',
                         alignItems: 'center',
-                    }}>
-                    <Text style={{ color: 'white' }}>CHỌN MUA</Text>
+                    }}
+                >
+                    <Text style={{color: 'white'}}>CHỌN MUA</Text>
                 </TouchableOpacity>
             </View>
-
         </SafeAreaView>
     );
 }
