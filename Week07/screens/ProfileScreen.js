@@ -1,4 +1,4 @@
-import {FlatList, Image, SafeAreaView, Text, TextInput, View} from "react-native";
+import {FlatList, Image, SafeAreaView, Text, TextInput, TouchableOpacity, View} from "react-native";
 import s from "../styles/MyStyles";
 import Button from "../components/Button";
 
@@ -8,28 +8,28 @@ export default function ProfileScreen() {
 
     const tasks = [
         {
-            "id" : "1",
-            "task" : "To check email",
+            "id": "1",
+            "task": "To check email",
         },
         {
-            "id" : "2",
-            "task" : "UI task web page",
+            "id": "2",
+            "task": "UI task web page",
         },
         {
-            "id" : "3",
-            "task" : "Learn JavaScript basic",
+            "id": "3",
+            "task": "Learn JavaScript basic",
         },
         {
-            "id" : "4",
-            "task" : "Learn HTML advance",
+            "id": "4",
+            "task": "Learn HTML advance",
         },
         {
-            "id" : "5",
-            "task" : "Medical App UI",
+            "id": "5",
+            "task": "Medical App UI",
         },
         {
-            "id" : "6",
-            "task" : "Learn Java",
+            "id": "6",
+            "task": "Learn Java",
         },
     ];
 
@@ -53,7 +53,11 @@ export default function ProfileScreen() {
                 </View>
             </View>
             <View style={[s.h10, s.justifyCenter, s.w90]}>
-                <View style={[{borderWidth: 1, borderColor: "gray", borderRadius: 10}, s.flexRow, s.p6, s.alignCenter, s.justifyEvenly]}>
+                <View style={[{
+                    borderWidth: 1,
+                    borderColor: "gray",
+                    borderRadius: 10
+                }, s.flexRow, s.p6, s.alignCenter, s.justifyEvenly]}>
                     <View style={[s.justifyCenter_alignCenter]}>
                         <Image source={require("../myassets/search.png")}
                                style={[s.w5, s.aspectRatio1]}
@@ -67,7 +71,7 @@ export default function ProfileScreen() {
                 </View>
 
             </View>
-            <View style={[s.h50]}>
+            <View style={[s.h50, s.alignCenter]}>
                 <FlatList data={tasks}
                           renderItem={({item}) => (Task({item}))}
                           keyExtractor={item => item.id.toString()}
@@ -75,7 +79,10 @@ export default function ProfileScreen() {
             </View>
             <View style={[s.h30]}>
                 <Button title={"+"}
-                        styleButton={[{backgroundColor: "#00BDD6", borderRadius: 35}, s.justifyCenter_alignCenter, s.w15, s.aspectRatio1]}
+                        styleButton={[{
+                            backgroundColor: "#00BDD6",
+                            borderRadius: 35
+                        }, s.justifyCenter_alignCenter, s.w15, s.aspectRatio1]}
                         styleText={[s.textWhite, s.textSize42, s.lineHeight48]}
                 />
             </View>
@@ -85,6 +92,22 @@ export default function ProfileScreen() {
 
 function Task({item}) {
     return (
-        <Text>{item.task}</Text>
+        <View style={[s.flexRow, s.w100, s.justifyEvenly, s.alignCenter, {height: 50, marginBottom: 10, borderRadius: 20, backgroundColor: "#DEE1E678"}]}>
+            <TouchableOpacity>
+                <Image source={require("../myassets/check.png")}
+                       style={[s.w5, s.aspectRatio1]}
+                       resizeMode={"contain"}
+                />
+            </TouchableOpacity>
+            <View style={[s.w70, s.justifyCenter]}>
+                <Text>{item.task}</Text>
+            </View>
+            <TouchableOpacity>
+                <Image source={require("../myassets/write.png")}
+                       style={[s.w5, s.aspectRatio1]}
+                       resizeMode={"contain"}
+                />
+            </TouchableOpacity>
+        </View>
     )
 }
