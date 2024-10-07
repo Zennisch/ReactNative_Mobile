@@ -4,6 +4,7 @@ import UseStateNone from "./screens/UseStateNone";
 import UseStateEmpty from "./screens/UseStateEmpty";
 import UseStateCallback from "./screens/UseStateCallback";
 import UseEffectCallback from "./screens/UseEffectCallback";
+import UseEffectCallbackEmpty from "./screens/UseEffectCallbackEmpty";
 
 export default function App() {
     return (
@@ -12,6 +13,7 @@ export default function App() {
             <UseStateEmpty/>
             <UseStateCallback/>
             <UseEffectCallback/>
+            <UseEffectCallbackEmpty/>
         </ScrollView>
     );
 }
