@@ -17,7 +17,7 @@ const DiceRollApp = () => {
                 Result: {diceRolls.join(', ')}
             </Text>
         </View>
-    )
-}
+    );
+};
 
 export default DiceRollApp;
