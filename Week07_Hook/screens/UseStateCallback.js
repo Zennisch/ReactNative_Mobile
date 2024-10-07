@@ -12,9 +12,9 @@ const CounterApp = () => {
 
     return (
         <View style={{padding: 20}}>
-            <Text>Initial Random Count: {count}</Text>
             <Button title="Increase" onPress={() => setCount(count + 1)}/>
             <Button title="Reset" onPress={() => setCount(() => calculateInitialValue())}/>
+            <Text>Initial Random Count: {count}</Text>
         </View>
     );
 };

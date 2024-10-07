@@ -7,9 +7,9 @@ const CounterApp = () => {
 
     return (
         <View style={{padding: 20}}>
-            <Text>Count: {count}</Text>
             <Button title="Increase" onPress={() => setCount(count + 1)}/>
             <Button title="Reset" onPress={() => setCount(0)}/>
+            <Text>Count: {count}</Text>
         </View>
     );
 };
