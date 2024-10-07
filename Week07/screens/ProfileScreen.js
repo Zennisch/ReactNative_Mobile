@@ -1,10 +1,37 @@
-import {Image, SafeAreaView, Text, TextInput, View} from "react-native";
+import {FlatList, Image, SafeAreaView, Text, TextInput, View} from "react-native";
 import s from "../styles/MyStyles";
 import Button from "../components/Button";
 
 export default function ProfileScreen() {
 
     let username = "John Doe";
+
+    const tasks = [
+        {
+            "id" : "1",
+            "task" : "To check email",
+        },
+        {
+            "id" : "2",
+            "task" : "UI task web page",
+        },
+        {
+            "id" : "3",
+            "task" : "Learn JavaScript basic",
+        },
+        {
+            "id" : "4",
+            "task" : "Learn HTML advance",
+        },
+        {
+            "id" : "5",
+            "task" : "Medical App UI",
+        },
+        {
+            "id" : "6",
+            "task" : "Learn Java",
+        },
+    ];
 
     return (
         <SafeAreaView style={[s.flex, s.flexColumn, s.w100, s.alignCenter, s.bgWhite]}>
@@ -40,7 +67,12 @@ export default function ProfileScreen() {
                 </View>
 
             </View>
-            <View style={[s.h50]}></View>
+            <View style={[s.h50]}>
+                <FlatList data={tasks}
+                          renderItem={({item}) => (Task({item}))}
+                          keyExtractor={item => item.id.toString()}
+                />
+            </View>
             <View style={[s.h30]}>
                 <Button title={"+"}
                         styleButton={[{backgroundColor: "#00BDD6", borderRadius: 35}, s.justifyCenter_alignCenter, s.w15, s.aspectRatio1]}
@@ -48,5 +80,11 @@ export default function ProfileScreen() {
                 />
             </View>
         </SafeAreaView>
+    )
+}
+
+function Task({item}) {
+    return (
+        <Text>{item.task}</Text>
     )
 }

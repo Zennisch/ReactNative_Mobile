@@ -12,8 +12,8 @@ export default function App() {
         <NavigationContainer>
             <Stack.Navigator>
                 {/*<Stack.Screen name={"HomeScreen"} component={HomeScreen}/>*/}
-                {/*<Stack.Screen name={"ProfileScreen"} component={ProfileScreen}/>*/}
-                <Stack.Screen name={"TaskScreen"} component={TaskScreen}/>
+                <Stack.Screen name={"ProfileScreen"} component={ProfileScreen}/>
+                {/*<Stack.Screen name={"TaskScreen"} component={TaskScreen}/>*/}
             </Stack.Navigator>
         </NavigationContainer>
     );
