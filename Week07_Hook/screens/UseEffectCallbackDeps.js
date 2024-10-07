@@ -16,7 +16,7 @@ const IncrementDepsApp = () => {
     }, [count]); // Effect depends on `count`
 
     return (
-        <View style={{padding: 20, gap: 10}}>
+        <View style={{padding: 20}}>
             <Button title={`Increment Count: ${count}`} onPress={() => setCount(count + 1)}/>
             <Button title={`Increment Other: ${countOther}`} onPress={() => setCountOther(countOther + 1)}/>
         </View>
