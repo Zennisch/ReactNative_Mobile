@@ -6,6 +6,7 @@ import UseStateCallback from "./screens/UseStateCallback";
 import UseEffectCallback from "./screens/UseEffectCallback";
 import UseEffectCallbackEmpty from "./screens/UseEffectCallbackEmpty";
 import UseEffectCallbackDeps from "./screens/UseEffectCallbackDeps";
+import UseRefAccessDom from "./screens/UseRefAccessDom";
 
 export default function App() {
     return (
@@ -27,6 +28,9 @@ export default function App() {
 
             <Text style={{textAlign: "center", fontSize: 20}}>useEffect(callback, [deps])</Text>
             <UseEffectCallbackDeps/>
+
+            <Text style={{textAlign: "center", fontSize: 20}}>useRef to access DOM</Text>
+            <UseRefAccessDom/>
         </ScrollView>
     );
 }
