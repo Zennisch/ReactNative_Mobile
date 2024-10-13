@@ -7,6 +7,7 @@ import UseEffectCallback from "./screens/UseEffectCallback";
 import UseEffectCallbackEmpty from "./screens/UseEffectCallbackEmpty";
 import UseEffectCallbackDeps from "./screens/UseEffectCallbackDeps";
 import UseRefAccessDom from "./screens/UseRefAccessDom";
+import UseRefStoreMutable from "./screens/UseRefStoreMutable";
 
 export default function App() {
     return (
@@ -31,6 +32,9 @@ export default function App() {
 
             <Text style={{textAlign: "center", fontSize: 20}}>useRef to access DOM</Text>
             <UseRefAccessDom/>
+
+            <Text style={{textAlign: "center", fontSize: 20}}>useRef to store mutable value</Text>
+            <UseRefStoreMutable/>
         </ScrollView>
     );
 }

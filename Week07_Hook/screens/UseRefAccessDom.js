@@ -12,11 +12,11 @@ const UseRefAccessDom = () => {
     }
 
     return(
-        <View>
+        <View style={{padding: 20}}>
             <TextInput ref={inputRef} placeholder="Type here" />
             <Button title="Focus Input" onPress={focusInput} />
         </View>
-    )
-}
+    );
+};
 
 export default UseRefAccessDom;
