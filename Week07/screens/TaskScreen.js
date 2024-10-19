@@ -4,9 +4,9 @@ import Button from "../components/Button";
 import {useEffect, useState} from "react";
 import {useFocusEffect, useIsFocused} from "@react-navigation/native";
 
-export default function TaskScreen({navigation}) {
+export default function TaskScreen({navigation, route}) {
 
-    let username = "John Doe";
+    let username = route.params.username;
 
     const api_tasks = "https://67137f306c5f5ced66269d90.mockapi.io/week07/tasks";
 

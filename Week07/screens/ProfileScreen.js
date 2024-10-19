@@ -20,7 +20,7 @@ export default function ProfileScreen({navigation, route}) {
             const json = await response.json();
             setData(json);
         } catch (error) {
-            console.error("Error from here:", error);
+            console.error("Error:", error);
         } finally {
             setLoading(false);
         }
@@ -82,7 +82,7 @@ export default function ProfileScreen({navigation, route}) {
             </View>
             <View style={[s.h30]}>
                 <Button title={"+"}
-                        onPress={() => navigation.navigate("TaskScreen")}
+                        onPress={() => navigation.navigate("TaskScreen", route.params)}
                         styleButton={[{
                             backgroundColor: "#00BDD6",
                             borderRadius: 35
