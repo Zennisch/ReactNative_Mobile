@@ -2,6 +2,7 @@ import {FlatList, Image, SafeAreaView, Text, TextInput, TouchableOpacity, View} 
 import s from "../styles/MyStyles";
 import Button from "../components/Button";
 import {useEffect, useState} from "react";
+import {useFocusEffect} from "@react-navigation/native";
 
 export default function ProfileScreen({navigation}) {
 
@@ -24,9 +25,9 @@ export default function ProfileScreen({navigation}) {
         }
     };
 
-    useEffect(() => {
+    useFocusEffect(() => {
         fetchData();
-    }, []);
+    });
 
     return (
         <SafeAreaView style={[s.flex, s.flexColumn, s.w100, s.alignCenter, s.bgWhite]}>
