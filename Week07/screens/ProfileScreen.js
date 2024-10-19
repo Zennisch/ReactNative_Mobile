@@ -97,7 +97,7 @@ export default function ProfileScreen({navigation, route}) {
 function Task({item}) {
     const api_tasks = "https://67137f306c5f5ced66269d90.mockapi.io/week07/tasks";
 
-    const [check, setCheck] = useState(item.check === "true");
+    const [check, setCheck] = useState(item.check === true);
 
     const map_check = {
         true: require("../myassets/check.png"),
