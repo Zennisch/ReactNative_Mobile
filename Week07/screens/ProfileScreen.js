@@ -94,10 +94,13 @@ export default function ProfileScreen() {
 
             </View>
             <View style={[s.h50, s.alignCenter]}>
-                <FlatList data={data}
-                          renderItem={({item}) => (Task({item}))}
-                          keyExtractor={item => item.id.toString()}
-                />
+                {loading ?
+                    (<Text>Loading...</Text>)
+                    :
+                    (<FlatList data={data}
+                               renderItem={({item}) => (Task({item}))}
+                               keyExtractor={item => item.id.toString()}
+                    />)}
             </View>
             <View style={[s.h30]}>
                 <Button title={"+"}
