@@ -95,11 +95,30 @@ export default function ProfileScreen({navigation, route}) {
 }
 
 function Task({item}) {
+    const api_tasks = "https://67137f306c5f5ced66269d90.mockapi.io/week07/tasks";
+
     const [check, setCheck] = useState(item.check === "true");
 
     const map_check = {
         true: require("../myassets/check.png"),
         false: require("../myassets/uncheck.png")
+    }
+
+    const checkTask = async () => {
+        const payload = {
+            method: "PUT",
+            headers: {"Content-Type": "application/json"},
+            body: JSON.stringify({check: !check})
+        }
+
+        try {
+            const response = await fetch(api_tasks + "/" + item.id, payload);
+            const json = await response.json();
+            console.log(json);
+            setCheck(!check);
+        } catch (error) {
+            console.error("Error:", error);
+        }
     }
 
     return (
@@ -109,7 +128,7 @@ function Task({item}) {
             borderRadius: 20,
             backgroundColor: "#DEE1E678"
         }]}>
-            <TouchableOpacity onPress={() => setCheck(!check)}>
+            <TouchableOpacity onPress={() => checkTask()}>
                 <Image source={map_check[check]}
                        style={[s.w5, s.aspectRatio1]}
                        resizeMode={"contain"}
