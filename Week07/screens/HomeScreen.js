@@ -2,7 +2,7 @@ import {Image, SafeAreaView, StyleSheet, Text, TextInput, View} from "react-nati
 import s from "../styles/MyStyles";
 import Button from "../components/Button";
 
-export default function HomeScreen() {
+export default function HomeScreen({navigation}) {
     return (
         <SafeAreaView style={[s.flex, s.flexColumn, s.alignCenter, s.bgWhite]}>
             <View style={[s.h40, s.w100, s.justifyCenter_alignCenter]}>
@@ -27,6 +27,7 @@ export default function HomeScreen() {
             </View>
             <View style={[s.h30, s.w100, s.justifyCenter_alignCenter]}>
                 <Button title={"GET STARTED →"}
+                        onPress={() => navigation.navigate("ProfileScreen")}
                         styleButton={[{backgroundColor: "#00BDD6", borderRadius: 15}, s.w50, s.h20, s.justifyCenter_alignCenter]}
                         styleText={[s.textWhite, s.textSize18]}
                 />

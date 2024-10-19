@@ -3,7 +3,7 @@ import s from "../styles/MyStyles";
 import Button from "../components/Button";
 import {useEffect, useState} from "react";
 
-export default function ProfileScreen() {
+export default function ProfileScreen({navigation}) {
 
     let username = "John Doe";
 
@@ -27,33 +27,6 @@ export default function ProfileScreen() {
     useEffect(() => {
         fetchData();
     }, []);
-
-    // const tasks = [
-    //     {
-    //         "id": "1",
-    //         "task": "To check email",
-    //     },
-    //     {
-    //         "id": "2",
-    //         "task": "UI task web page",
-    //     },
-    //     {
-    //         "id": "3",
-    //         "task": "Learn JavaScript basic",
-    //     },
-    //     {
-    //         "id": "4",
-    //         "task": "Learn HTML advance",
-    //     },
-    //     {
-    //         "id": "5",
-    //         "task": "Medical App UI",
-    //     },
-    //     {
-    //         "id": "6",
-    //         "task": "Learn Java",
-    //     },
-    // ];
 
     return (
         <SafeAreaView style={[s.flex, s.flexColumn, s.w100, s.alignCenter, s.bgWhite]}>
@@ -104,6 +77,7 @@ export default function ProfileScreen() {
             </View>
             <View style={[s.h30]}>
                 <Button title={"+"}
+                        onPress={() => navigation.navigate("TaskScreen")}
                         styleButton={[{
                             backgroundColor: "#00BDD6",
                             borderRadius: 35
