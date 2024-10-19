@@ -23,14 +23,15 @@ export default function TaskScreen({navigation, route}) {
                 "Content-Type": "application/json"
             },
             body: JSON.stringify({
-                task: task
+                task: task,
+                check: false
             })
         };
 
         try {
             const response = await fetch(api_tasks, payload);
             const json = await response.json();
-            navigation.navigate("ProfileScreen");
+            navigation.navigate("ProfileScreen", route.params);
         } catch (error) {
             console.error("Error:", error);
         }

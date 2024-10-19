@@ -76,7 +76,7 @@ export default function ProfileScreen({navigation, route}) {
                     (<Text>Loading...</Text>)
                     :
                     (<FlatList data={data}
-                               renderItem={({item}) => (Task({item}))}
+                               renderItem={({item}) => <Task item={item} />}
                                keyExtractor={item => item.id.toString()}
                     />)}
             </View>
@@ -95,6 +95,13 @@ export default function ProfileScreen({navigation, route}) {
 }
 
 function Task({item}) {
+    const [check, setCheck] = useState(item.check === "true");
+
+    const map_check = {
+        true: require("../myassets/check.png"),
+        false: require("../myassets/uncheck.png")
+    }
+
     return (
         <View style={[s.flexRow, s.w100, s.justifyEvenly, s.alignCenter, {
             height: 50,
@@ -102,8 +109,8 @@ function Task({item}) {
             borderRadius: 20,
             backgroundColor: "#DEE1E678"
         }]}>
-            <TouchableOpacity>
-                <Image source={require("../myassets/check.png")}
+            <TouchableOpacity onPress={() => setCheck(!check)}>
+                <Image source={map_check[check]}
                        style={[s.w5, s.aspectRatio1]}
                        resizeMode={"contain"}
                 />
