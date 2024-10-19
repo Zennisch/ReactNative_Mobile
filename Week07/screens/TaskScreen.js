@@ -1,7 +1,8 @@
 import {Image, SafeAreaView, Text, TextInput, View} from "react-native";
 import s from "../styles/MyStyles";
 import Button from "../components/Button";
-import {useState} from "react";
+import {useEffect, useState} from "react";
+import {useFocusEffect, useIsFocused} from "@react-navigation/native";
 
 export default function TaskScreen({navigation}) {
 
@@ -9,7 +10,8 @@ export default function TaskScreen({navigation}) {
 
     const api_tasks = "https://67137f306c5f5ced66269d90.mockapi.io/week07/tasks";
 
-    let [task, setTask] = useState("");
+    const [task, setTask] = useState("");
+    const isFocused = useIsFocused();
 
     const addTask = async () => {
         if (task === "") {
@@ -28,12 +30,17 @@ export default function TaskScreen({navigation}) {
         try {
             const response = await fetch(api_tasks, payload);
             const json = await response.json();
-            setTask("");
             navigation.navigate("ProfileScreen");
         } catch (error) {
             console.error("Error:", error);
         }
     };
+
+    useEffect(() => {
+        if (isFocused) {
+            setTask("");
+        }
+    }, [isFocused]);
 
     return (
         <SafeAreaView style={[s.flex, s.flexColumn, s.bgWhite, s.alignCenter]}>

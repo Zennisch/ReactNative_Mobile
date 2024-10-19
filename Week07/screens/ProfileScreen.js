@@ -1,8 +1,8 @@
 import {FlatList, Image, SafeAreaView, Text, TextInput, TouchableOpacity, View} from "react-native";
 import s from "../styles/MyStyles";
 import Button from "../components/Button";
-import {useEffect, useState} from "react";
-import {useFocusEffect} from "@react-navigation/native";
+import {useCallback, useEffect, useState} from "react";
+import {useFocusEffect, useIsFocused} from "@react-navigation/native";
 
 export default function ProfileScreen({navigation}) {
 
@@ -12,6 +12,7 @@ export default function ProfileScreen({navigation}) {
 
     const [data, setData] = useState([]);
     const [loading, setLoading] = useState(true);
+    const isFocused = useIsFocused();
 
     const fetchData = async () => {
         try {
@@ -19,15 +20,18 @@ export default function ProfileScreen({navigation}) {
             const json = await response.json();
             setData(json);
         } catch (error) {
-            console.error("Error:", error);
+            console.error("Error from here:", error);
         } finally {
             setLoading(false);
         }
     };
 
-    useFocusEffect(() => {
-        fetchData();
-    });
+    useEffect(() => {
+        if (isFocused) {
+            fetchData();
+        }
+
+    }, [isFocused]);
 
     return (
         <SafeAreaView style={[s.flex, s.flexColumn, s.w100, s.alignCenter, s.bgWhite]}>
@@ -92,7 +96,12 @@ export default function ProfileScreen({navigation}) {
 
 function Task({item}) {
     return (
-        <View style={[s.flexRow, s.w100, s.justifyEvenly, s.alignCenter, {height: 50, marginBottom: 10, borderRadius: 20, backgroundColor: "#DEE1E678"}]}>
+        <View style={[s.flexRow, s.w100, s.justifyEvenly, s.alignCenter, {
+            height: 50,
+            marginBottom: 10,
+            borderRadius: 20,
+            backgroundColor: "#DEE1E678"
+        }]}>
             <TouchableOpacity>
                 <Image source={require("../myassets/check.png")}
                        style={[s.w5, s.aspectRatio1]}
