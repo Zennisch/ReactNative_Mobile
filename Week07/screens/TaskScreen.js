@@ -2,7 +2,7 @@ import {Image, SafeAreaView, Text, TextInput, View} from "react-native";
 import s from "../styles/MyStyles";
 import Button from "../components/Button";
 import {useEffect, useState} from "react";
-import {useFocusEffect, useIsFocused} from "@react-navigation/native";
+import {useIsFocused} from "@react-navigation/native";
 
 export default function TaskScreen({navigation, route}) {
 

@@ -1,8 +1,8 @@
 import {FlatList, Image, SafeAreaView, Text, TextInput, TouchableOpacity, View} from "react-native";
 import s from "../styles/MyStyles";
 import Button from "../components/Button";
-import {useCallback, useEffect, useState} from "react";
-import {useFocusEffect, useIsFocused} from "@react-navigation/native";
+import {useEffect, useState} from "react";
+import {useIsFocused} from "@react-navigation/native";
 
 export default function ProfileScreen({navigation, route}) {
 
