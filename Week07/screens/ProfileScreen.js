@@ -114,7 +114,6 @@ function Task({item}) {
         try {
             const response = await fetch(api_tasks + "/" + item.id, payload);
             const json = await response.json();
-            console.log(json);
             setCheck(!check);
         } catch (error) {
             console.error("Error:", error);
