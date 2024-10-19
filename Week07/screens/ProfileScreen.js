@@ -1,37 +1,59 @@
 import {FlatList, Image, SafeAreaView, Text, TextInput, TouchableOpacity, View} from "react-native";
 import s from "../styles/MyStyles";
 import Button from "../components/Button";
+import {useEffect, useState} from "react";
 
 export default function ProfileScreen() {
 
     let username = "John Doe";
 
-    const tasks = [
-        {
-            "id": "1",
-            "task": "To check email",
-        },
-        {
-            "id": "2",
-            "task": "UI task web page",
-        },
-        {
-            "id": "3",
-            "task": "Learn JavaScript basic",
-        },
-        {
-            "id": "4",
-            "task": "Learn HTML advance",
-        },
-        {
-            "id": "5",
-            "task": "Medical App UI",
-        },
-        {
-            "id": "6",
-            "task": "Learn Java",
-        },
-    ];
+    const api_tasks = "https://67137f306c5f5ced66269d90.mockapi.io/week07/tasks";
+
+    const [data, setData] = useState([]);
+    const [loading, setLoading] = useState(true);
+
+    const fetchData = async () => {
+        try {
+            const response = await fetch(api_tasks);
+            const json = await response.json();
+            setData(json);
+        } catch (error) {
+            console.error("Error:", error);
+        } finally {
+            setLoading(false);
+        }
+    };
+
+    useEffect(() => {
+        fetchData();
+    }, []);
+
+    // const tasks = [
+    //     {
+    //         "id": "1",
+    //         "task": "To check email",
+    //     },
+    //     {
+    //         "id": "2",
+    //         "task": "UI task web page",
+    //     },
+    //     {
+    //         "id": "3",
+    //         "task": "Learn JavaScript basic",
+    //     },
+    //     {
+    //         "id": "4",
+    //         "task": "Learn HTML advance",
+    //     },
+    //     {
+    //         "id": "5",
+    //         "task": "Medical App UI",
+    //     },
+    //     {
+    //         "id": "6",
+    //         "task": "Learn Java",
+    //     },
+    // ];
 
     return (
         <SafeAreaView style={[s.flex, s.flexColumn, s.w100, s.alignCenter, s.bgWhite]}>
@@ -72,7 +94,7 @@ export default function ProfileScreen() {
 
             </View>
             <View style={[s.h50, s.alignCenter]}>
-                <FlatList data={tasks}
+                <FlatList data={data}
                           renderItem={({item}) => (Task({item}))}
                           keyExtractor={item => item.id.toString()}
                 />
